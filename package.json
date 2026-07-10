@@ -5,7 +5,7 @@
   "description": "Fast, accessible Astro blog and portfolio for WarTeamX.",
   "type": "module",
   "license": "CC0-1.0",
-  "homepage": "https://warteamx.github.io/blog/",
+  "homepage": "https://blog.warteamx.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/warteamx/blog.git"

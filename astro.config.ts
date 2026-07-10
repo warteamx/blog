@@ -7,8 +7,7 @@ import { remarkCodeFilename } from './src/plugins/remark-code-filename';
 const FILENAME_PATTERN = /(?:filename|title)="([^"]+)"/;
 
 export default defineConfig({
-  site: 'https://warteamx.github.io/blog/',
-  base: '/blog',
+  site: 'https://blog.warteamx.com',
   trailingSlash: 'always',
   integrations: [mdx(), sitemap()],
   markdown: {
