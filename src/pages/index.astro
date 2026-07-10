@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from '@/components/ArticleCard.astro';
+import Hero from '@/components/Hero.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { isPublished, sortPosts, withBase, type ProjectEntry } from '@/utils/content';
+
+const allPosts = sortPosts((await getCollection('blog')).filter(isPublished));
+const featuredArticles = allPosts.slice(0, 2);
+const latestPosts = allPosts.slice(0, 3);
+const featuredProjects = (await getCollection('projects')).filter(
+  (project: ProjectEntry) => project.data.featured,
+);
+---
+
+<BaseLayout>
+  <Hero />
+
+  <section aria-labelledby="featured-articles-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Featured articles</p>
+        <h2 id="featured-articles-title">Deep dives on reliability, telemetry, and delivery</h2>
+      </div>
+      <a href={withBase('/blog/')}>Browse all posts</a>
+    </div>
+    <div class="card-grid">
+      {featuredArticles.map((post) => <ArticleCard post={post} />)}
+    </div>
+  </section>
+
+  <section aria-labelledby="featured-projects-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Featured projects</p>
+        <h2 id="featured-projects-title">Selected work with an engineering-first mindset</h2>
+      </div>
+      <a href={withBase('/projects/')}>See the full project showcase</a>
+    </div>
+    <div class="card-grid">
+      {featuredProjects.map((project: ProjectEntry) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section aria-labelledby="latest-posts-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Latest posts</p>
+        <h2 id="latest-posts-title">Fresh writing from the field</h2>
+      </div>
+    </div>
+    <div class="card-grid">
+      {latestPosts.map((post) => <ArticleCard post={post} variant="compact" />)}
+    </div>
+  </section>
+
+  <section class="about-panel" aria-labelledby="home-about-title">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2 id="home-about-title">I build software that stays understandable under pressure.</h2>
+    </div>
+    <p>
+      I’m Martin Rebo, a senior software engineer focused on TypeScript systems, cloud architecture,
+      and observability. I enjoy reducing operational risk, improving delivery feedback loops, and
+      helping teams ship software that remains maintainable months later.
+    </p>
+  </section>
+</BaseLayout>

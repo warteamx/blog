@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a" rx="24"/>
+  <rect x="70" y="78" width="1060" height="474" rx="24" fill="#111827" stroke="#1d4ed8" stroke-width="4"/>
+  <text x="110" y="180" fill="#7dd3fc" font-family="Inter, sans-serif" font-size="28">Node.js · Reliability</text>
+  <text x="110" y="285" fill="#ffffff" font-family="Inter, sans-serif" font-size="64" font-weight="700">Building Reliable</text>
+  <text x="110" y="360" fill="#ffffff" font-family="Inter, sans-serif" font-size="64" font-weight="700">Node.js APIs</text>
+  <text x="110" y="455" fill="#94a3b8" font-family="Inter, sans-serif" font-size="30">Predictable contracts, observable failures, operationally boring defaults.</text>
+</svg>

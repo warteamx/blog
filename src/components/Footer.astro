@@ -1,0 +1,38 @@
+---
+import { siteConfig } from '@/config/site';
+import { withBase } from '@/utils/content';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="eyebrow">WarTeamX Engineering</p>
+      <p>
+        Writing about TypeScript, cloud systems, observability, and the craft of shipping reliable
+        software.
+      </p>
+    </div>
+
+    <div>
+      <p class="eyebrow">Explore</p>
+      <ul class="footer-links">
+        <li><a href={withBase('/blog/')}>Blog</a></li>
+        <li><a href={withBase('/projects/')}>Projects</a></li>
+        <li><a href={withBase('/about/')}>About</a></li>
+        <li><a href={withBase('/uses/')}>Uses</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="eyebrow">Topics</p>
+      <p>{siteConfig.featuredTopics.slice(0, 5).join(' · ')}</p>
+    </div>
+  </div>
+
+  <div class="container footer-meta">
+    <p>© {year} Martin Rebo. Published with Astro on GitHub Pages.</p>
+    <a href={siteConfig.siteUrl}>RSS, sitemap, and metadata included</a>
+  </div>
+</footer>

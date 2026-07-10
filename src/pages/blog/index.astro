@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from '@/components/ArticleCard.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { isPublished, sortPosts, toTagSlug, withBase } from '@/utils/content';
+
+const posts = sortPosts((await getCollection('blog')).filter(isPublished));
+const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort((left, right) =>
+  left.localeCompare(right),
+);
+---
+
+<BaseLayout
+  title="Blog"
+  description="Articles on TypeScript, Node.js, reliability, observability, and modern engineering."
+>
+  <section class="page-intro">
+    <p class="eyebrow">All posts</p>
+    <h1>Engineering notes from real systems and shipping software.</h1>
+    <p class="lede">
+      Articles focused on practical TypeScript, Node.js, system design, cloud delivery, and
+      observability.
+    </p>
+  </section>
+
+  <section class="tag-cloud" aria-labelledby="tag-cloud-title">
+    <h2 id="tag-cloud-title">Browse by tag</h2>
+    <div class="project-stack">
+      {tags.map((tag) => <a href={withBase(`/tags/${toTagSlug(tag)}/`)}>{tag}</a>)}
+    </div>
+  </section>
+
+  <section class="card-grid" aria-label="Blog posts">
+    {posts.map((post) => <ArticleCard post={post} />)}
+  </section>
+</BaseLayout>

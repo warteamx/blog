@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectCard from '@/components/ProjectCard.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import type { ProjectEntry } from '@/utils/content';
+
+const projects = (await getCollection('projects')).sort(
+  (left: ProjectEntry, right: ProjectEntry) =>
+    right.data.featured === left.data.featured
+      ? left.data.title.localeCompare(right.data.title)
+      : Number(right.data.featured) - Number(left.data.featured),
+);
+---
+
+<BaseLayout
+  title="Projects"
+  description="Selected TypeScript, React, and cloud-native projects built by Martin Rebo."
+>
+  <section class="page-intro">
+    <p class="eyebrow">Project showcase</p>
+    <h1>Selected builds focused on clarity, delivery, and operational excellence.</h1>
+    <p class="lede">
+      A curated set of products and experiments spanning frontend delivery, platform thinking, and
+      maintainable engineering systems.
+    </p>
+  </section>
+
+  <section class="card-grid" aria-label="Projects">
+    {projects.map((project: ProjectEntry) => <ProjectCard project={project} />)}
+  </section>
+</BaseLayout>

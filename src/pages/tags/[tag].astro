@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleCard from '@/components/ArticleCard.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { isPublished, sortPosts, toTagSlug } from '@/utils/content';
+
+export async function getStaticPaths() {
+  const posts = sortPosts((await getCollection('blog')).filter(isPublished));
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+
+  return tags.map((tag) => ({
+    params: { tag: toTagSlug(tag) },
+    props: {
+      tag,
+      posts: posts.filter((post) =>
+        post.data.tags.some((value: string) => toTagSlug(value) === toTagSlug(tag)),
+      ),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<BaseLayout title={`Posts tagged ${tag}`} description={`Browse articles tagged ${tag}.`}>
+  <section class="page-intro">
+    <p class="eyebrow">Tag archive</p>
+    <h1>{tag}</h1>
+    <p class="lede">Posts grouped by a shared topic for faster browsing.</p>
+  </section>
+
+  <section class="card-grid" aria-label={`Posts tagged ${tag}`}>
+    {posts.map((post) => <ArticleCard post={post} variant="compact" />)}
+  </section>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface ProjectLink {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const links: ProjectLink[] = [
+  project.data.liveUrl ? { href: project.data.liveUrl, label: 'Live site' } : null,
+  project.data.repoUrl ? { href: project.data.repoUrl, label: 'Source' } : null,
+].filter((link): link is ProjectLink => Boolean(link));
+---
+
+<article class="card project-card">
+  <div class="project-header">
+    <div>
+      <p class="eyebrow">{project.data.status}</p>
+      <h3 class="card-title">{project.data.title}</h3>
+    </div>
+  </div>
+
+  <p>{project.data.description}</p>
+  <div class="project-stack" aria-label="Technology stack">
+    {project.data.stack.map((item: string) => <span>{item}</span>)}
+  </div>
+
+  <div class="project-links">
+    {links.map((link) => <a href={link.href}>{link.label}</a>)}
+  </div>
+</article>

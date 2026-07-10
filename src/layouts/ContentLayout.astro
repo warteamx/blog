@@ -1,0 +1,65 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import TagList from '@/components/TagList.astro';
+import TableOfContents from '@/components/TableOfContents.astro';
+import PrevNextPosts from '@/components/PrevNextPosts.astro';
+import RelatedPosts from '@/components/RelatedPosts.astro';
+import { formatDate, withBase } from '@/utils/content';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  headings: Heading[];
+  previousPost?: CollectionEntry<'blog'>;
+  nextPost?: CollectionEntry<'blog'>;
+  relatedPosts: CollectionEntry<'blog'>[];
+}
+
+const { post, headings, previousPost, nextPost, relatedPosts } = Astro.props;
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={post.data.coverImage}
+>
+  <article class="article-layout">
+    <div class="article-main">
+      <header class="article-header">
+        <p class="eyebrow">Engineering blog</p>
+        <h1>{post.data.title}</h1>
+        <p class="lede">{post.data.description}</p>
+        <div class="article-meta">
+          <span>{formatDate(post.data.publishedDate)}</span>
+          <span>{post.data.readingTime}</span>
+          {post.data.updatedDate && <span>Updated {formatDate(post.data.updatedDate)}</span>}
+        </div>
+        <TagList tags={post.data.tags} />
+        <img
+          class="hero-image"
+          src={withBase(post.data.coverImage)}
+          alt=""
+          width="1200"
+          height="630"
+        />
+      </header>
+
+      <div class="article-body">
+        <slot />
+      </div>
+
+      <PrevNextPosts previousPost={previousPost} nextPost={nextPost} />
+      <RelatedPosts posts={relatedPosts} />
+    </div>
+
+    <div class="article-sidebar">
+      <TableOfContents headings={headings} />
+    </div>
+  </article>
+</BaseLayout>
