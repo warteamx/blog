@@ -1,0 +1,69 @@
+---
+title: OpenTelemetry for TypeScript Applications
+description: A practical blueprint for instrumenting TypeScript services with traces, metrics, and context that stay useful in production.
+publishedDate: 2026-05-30
+updatedDate: 2026-06-05
+tags:
+  - OpenTelemetry
+  - TypeScript
+  - Observability
+  - Grafana
+draft: false
+coverImage: /images/covers/opentelemetry-typescript.svg
+readingTime: 8 min read
+---
+
+import Callout from '@/components/Callout.astro';
+
+OpenTelemetry works best when it becomes part of the application bootstrap rather than an afterthought added after the first outage.
+
+<Callout title="Practical rule">
+  Instrument the boundaries first: incoming requests, outbound network calls, queue handlers, and
+  database access. Those spans answer the highest-value questions during an incident.
+</Callout>
+
+## Keep the bootstrap thin
+
+The goal of an instrumentation entrypoint is to enable tracing and metrics without making the runtime difficult to reason about.
+
+```ts filename="src/instrumentation.ts"
+import { NodeSDK } from '@opentelemetry/sdk-node';
+import { getNodeAutoInstrumentations } from '@opentelemetry/auto-instrumentations-node';
+import { OTLPTraceExporter } from '@opentelemetry/exporter-trace-otlp-http';
+
+const sdk = new NodeSDK({
+  traceExporter: new OTLPTraceExporter({
+    url: process.env.OTEL_EXPORTER_OTLP_TRACES_ENDPOINT,
+  }),
+  instrumentations: [getNodeAutoInstrumentations()],
+  serviceName: 'payments-api',
+});
+
+await sdk.start();
+```
+
+## Capture business context deliberately
+
+Auto-instrumentation gives you a useful baseline, but the spans that matter most often describe domain work: checkout creation, invoice settlement, plan changes, or report generation.
+
+### A few attributes go a long way
+
+- Stable tenant or account identifiers
+- Operation category
+- Dependency target
+- Retry attempt number
+
+## Design dashboards around decisions
+
+The best dashboards reduce time-to-decision.
+
+1. Is the system healthy for users right now?
+2. Which dependency or code path regressed?
+3. Are errors isolated or widespread?
+4. Is the problem getting worse?
+
+## Use tracing to improve change safety
+
+Once traces are trustworthy, deployments become easier to evaluate. Engineers can compare before and after behavior without guessing whether a latency shift is normal traffic variance or a real regression.
+
+That is why I treat observability as a product capability rather than a purely operational concern.

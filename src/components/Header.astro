@@ -1,0 +1,49 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+import { siteConfig } from '@/config/site';
+import { withBase } from '@/utils/content';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const isActive = (href: string) => {
+  const target = withBase(href);
+
+  if (href === '/') {
+    return currentPath === withBase('/');
+  }
+
+  return currentPath.startsWith(target);
+};
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href={withBase('/')}>
+      <span class="brand-mark">W</span>
+      <span>
+        <strong>WarTeamX</strong>
+        <span class="brand-subtitle">Engineering blog</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul class="nav-list">
+        {
+          siteConfig.navigation.map((item) => (
+            <li>
+              <a href={withBase(item.href)} aria-current={isActive(item.href) ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <ThemeToggle />
+  </div>
+</header>

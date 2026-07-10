@@ -1,0 +1,30 @@
+export const siteConfig = {
+  title: 'WarTeamX Engineering',
+  author: 'Martin Rebo',
+  role: 'Senior Software Engineer',
+  description:
+    'Fast, opinionated writing about TypeScript, React, Node.js, system design, cloud reliability, observability, Grafana, OpenTelemetry, and open source.',
+  siteUrl: 'https://warteamx.github.io/blog/',
+  socialImage: '/social-card.svg',
+  socialHandle: '@warteamx',
+  email: 'hello@warteamx.dev',
+  navigation: [
+    { href: '/', label: 'Home' },
+    { href: '/blog/', label: 'Blog' },
+    { href: '/projects/', label: 'Projects' },
+    { href: '/about/', label: 'About' },
+    { href: '/uses/', label: 'Uses' },
+  ],
+  featuredTopics: [
+    'TypeScript',
+    'React',
+    'Node.js',
+    'System Design',
+    'Cloud',
+    'Reliability',
+    'Observability',
+    'Grafana',
+    'OpenTelemetry',
+    'Open Source',
+  ],
+} as const;

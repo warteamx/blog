@@ -1,0 +1,20 @@
+import { experimental_AstroContainer as AstroContainer } from 'astro/container';
+import { describe, expect, it } from 'vitest';
+import Header from '../../src/components/Header.astro';
+
+describe('Header', () => {
+  it('renders the primary navigation links', async () => {
+    const container = await AstroContainer.create();
+    const html = await container.renderToString(Header, {
+      props: {
+        currentPath: '/blog/',
+      },
+    });
+
+    expect(html).toContain('Home');
+    expect(html).toContain('Blog');
+    expect(html).toContain('Projects');
+    expect(html).toContain('About');
+    expect(html).toContain('Uses');
+  });
+});

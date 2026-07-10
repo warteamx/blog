@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#111827" rx="24"/>
+  <circle cx="930" cy="210" r="150" fill="#0f766e" opacity="0.25"/>
+  <circle cx="980" cy="360" r="90" fill="#22d3ee" opacity="0.2"/>
+  <text x="96" y="170" fill="#22d3ee" font-family="Inter, sans-serif" font-size="28">OpenTelemetry · Grafana</text>
+  <text x="96" y="280" fill="#ffffff" font-family="Inter, sans-serif" font-size="62" font-weight="700">OpenTelemetry for</text>
+  <text x="96" y="355" fill="#ffffff" font-family="Inter, sans-serif" font-size="62" font-weight="700">TypeScript Applications</text>
+  <text x="96" y="460" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="30">Traces, metrics, and context that remain useful in production.</text>
+</svg>

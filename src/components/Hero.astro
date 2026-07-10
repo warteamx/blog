@@ -1,0 +1,23 @@
+---
+import { siteConfig } from '@/config/site';
+import { withBase } from '@/utils/content';
+---
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">Senior Software Engineer</p>
+    <h1>Pragmatic engineering writing for teams building fast, reliable systems.</h1>
+    <p class="hero-copy">{siteConfig.description}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href={withBase('/blog/')}>Read the blog</a>
+      <a class="button" href={withBase('/projects/')}>View projects</a>
+    </div>
+  </div>
+
+  <aside class="hero-panel" aria-label="Specialties">
+    <p class="eyebrow">Focus areas</p>
+    <ul class="hero-topics">
+      {siteConfig.featuredTopics.map((topic) => <li>{topic}</li>)}
+    </ul>
+  </aside>
+</section>

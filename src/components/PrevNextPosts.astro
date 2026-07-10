@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '@/utils/content';
+
+interface Props {
+  previousPost?: CollectionEntry<'blog'>;
+  nextPost?: CollectionEntry<'blog'>;
+}
+
+const { previousPost, nextPost } = Astro.props;
+---
+
+<nav class="post-pagination" aria-label="Article pagination">
+  {
+    nextPost ? (
+      <a class="card pagination-card" href={withBase(`/blog/${nextPost.id}/`)}>
+        <span class="eyebrow">Newer post</span>
+        <strong>{nextPost.data.title}</strong>
+      </a>
+    ) : (
+      <span />
+    )
+  }
+
+  {
+    previousPost ? (
+      <a
+        class="card pagination-card pagination-card-right"
+        href={withBase(`/blog/${previousPost.id}/`)}
+      >
+        <span class="eyebrow">Older post</span>
+        <strong>{previousPost.data.title}</strong>
+      </a>
+    ) : null
+  }
+</nav>

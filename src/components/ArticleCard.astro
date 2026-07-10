@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import TagList from './TagList.astro';
+import { formatDate, withBase } from '@/utils/content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  variant?: 'default' | 'compact';
+}
+
+const { post, variant = 'default' } = Astro.props;
+---
+
+<article class={`card article-card ${variant === 'compact' ? 'article-card-compact' : ''}`}>
+  <a class="card-cover-link" href={withBase(`/blog/${post.id}/`)}>
+    <img
+      class="card-cover"
+      src={withBase(post.data.coverImage)}
+      alt=""
+      width="1200"
+      height="630"
+      loading="lazy"
+    />
+  </a>
+
+  <div class="card-body">
+    <div class="card-meta">
+      <span>{formatDate(post.data.publishedDate)}</span>
+      <span>{post.data.readingTime}</span>
+    </div>
+
+    <h3 class="card-title">
+      <a href={withBase(`/blog/${post.id}/`)}>{post.data.title}</a>
+    </h3>
+    <p>{post.data.description}</p>
+    <TagList tags={post.data.tags} />
+  </div>
+</article>
