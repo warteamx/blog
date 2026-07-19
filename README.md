@@ -1,6 +1,6 @@
-# WarTeamX Engineering Blog
+# WarTeamX Software Labs Blog
 
-A production-ready technical blog and portfolio built with Astro and TypeScript for GitHub Pages deployment.
+A production-ready technical blog built with Astro and TypeScript for GitHub Pages deployment.
 
 ## Project overview
 
