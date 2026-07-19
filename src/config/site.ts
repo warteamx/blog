@@ -1,9 +1,9 @@
 export const siteConfig = {
-  title: 'WarTeamX Engineering',
-  author: 'Martin Rebo',
-  role: 'Senior Software Engineer',
+  title: 'WarTeamX Software Labs',
+  author: 'WarTeamX Software Labs',
+  role: 'Independent Software Laboratory',
   description:
-    'Fast, opinionated writing about TypeScript, React, Node.js, system design, cloud reliability, observability, Grafana, OpenTelemetry, and open source.',
+    'An independent software laboratory focused on production-ready software, modern technologies, and practical engineering knowledge.',
   siteUrl: 'https://warteamx.github.io/blog/',
   socialImage: '/social-card.svg',
   socialHandle: '@warteamx',
