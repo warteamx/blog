@@ -3,11 +3,11 @@ export const siteConfig = {
   author: 'WarTeamX Software Labs',
   role: 'Independent Software Laboratory',
   description:
-    'An independent software laboratory focused on production-ready software, modern technologies, and practical engineering knowledge.',
+    'A software laboratory focused on software architecture, modern technologies, and practical engineering knowledge.',
   siteUrl: 'https://warteamx.github.io/blog/',
   socialImage: '/social-card.svg',
   socialHandle: '@warteamx',
-  email: 'hello@warteamx.dev',
+  email: 'hello@warteamx.com',
   navigation: [
     { href: '/', label: 'Home' },
     { href: '/blog/', label: 'Blog' },
@@ -16,15 +16,12 @@ export const siteConfig = {
     { href: '/uses/', label: 'Uses' },
   ],
   featuredTopics: [
-    'TypeScript',
-    'React',
-    'Node.js',
     'System Design',
     'Cloud',
+    'Artificial Intelligence',
     'Reliability',
     'Observability',
-    'Grafana',
-    'OpenTelemetry',
     'Open Source',
+    'JavaScript',
   ],
 } as const;

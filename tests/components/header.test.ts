@@ -16,6 +16,6 @@ describe('Header', () => {
     expect(html).toContain('Projects');
     expect(html).toContain('About');
     expect(html).toContain('Uses');
-    expect(html).toContain('Software Labs');
+    expect(html).toContain('Software Lab');
   });
 });

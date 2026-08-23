@@ -14,8 +14,8 @@ const { previousPost, nextPost } = Astro.props;
   {
     nextPost ? (
       <a class="card pagination-card" href={withBase(`/blog/${nextPost.id}/`)}>
-        <span class="eyebrow">Newer post</span>
-        <strong>{nextPost.data.title}</strong>
+        <span class="eyebrow">Newer post : </span>
+        <strong> {nextPost.data.title}</strong>
       </a>
     ) : (
       <span />
@@ -28,8 +28,8 @@ const { previousPost, nextPost } = Astro.props;
         class="card pagination-card pagination-card-right"
         href={withBase(`/blog/${previousPost.id}/`)}
       >
-        <span class="eyebrow">Older post</span>
-        <strong>{previousPost.data.title}</strong>
+        <span class="eyebrow"> Older post : </span>
+        <strong> {previousPost.data.title}</strong>
       </a>
     ) : null
   }
