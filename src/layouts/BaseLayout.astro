@@ -1,5 +1,4 @@
 ---
-import '@fontsource-variable/inter';
 import '@fontsource/jetbrains-mono/400.css';
 import '@fontsource/jetbrains-mono/700.css';
 import Header from '@/components/Header.astro';
@@ -62,7 +61,7 @@ const socialImage = new URL(image, Astro.site).toString();
       (() => {
         const storedTheme = localStorage.getItem('theme-preference');
         const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = storedTheme ?? (systemDark ? 'dark' : 'light');
+        const theme = storedTheme ?? (systemDark ? 'dark' : 'dark');
         document.documentElement.dataset.theme = theme;
       })();
     </script>
@@ -76,27 +75,6 @@ const socialImage = new URL(image, Astro.site).toString();
     <Footer />
     <script is:inline>
       (() => {
-        const themeToggle = document.querySelector('[data-theme-toggle]');
-        const themeLabel = document.querySelector('[data-theme-label]');
-        const getThemeLabel = (theme) =>
-          theme === 'dark' ? 'Dark' : theme === 'light' ? 'Light' : 'System';
-
-        const syncThemeLabel = () => {
-          const theme = document.documentElement.dataset.theme || 'light';
-          if (themeLabel) {
-            themeLabel.textContent = getThemeLabel(theme);
-          }
-        };
-
-        syncThemeLabel();
-
-        themeToggle?.addEventListener('click', () => {
-          const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-          document.documentElement.dataset.theme = nextTheme;
-          localStorage.setItem('theme-preference', nextTheme);
-          syncThemeLabel();
-        });
-
         document.querySelectorAll('pre').forEach((pre) => {
           if (pre.parentElement?.classList.contains('code-frame')) {
             return;

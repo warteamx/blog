@@ -1,36 +1,85 @@
+/* =========================================================
+   warteamX Software Lab — Design Tokens
+   Brand: https://github.com/warteamx/website/blob/main/brand-guidelines.md
+   Dark mode is the default; light mode flips via [data-theme="light"].
+   ========================================================= */
+
 :root {
-  color-scheme: light;
-  --background: #f5f7fb;
-  --surface: rgba(255, 255, 255, 0.9);
-  --surface-strong: #ffffff;
-  --text: #132033;
-  --text-muted: #53627a;
-  --border: rgba(19, 32, 51, 0.12);
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.1);
-  --code-background: #0f172a;
-  --shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
-  --radius: 1.25rem;
-  --radius-sm: 0.875rem;
+  color-scheme: dark;
+
+  /* --- Layout --- */
+  --radius: 1rem;
+  --radius-sm: 0.75rem;
   --content-width: min(72rem, calc(100vw - 2rem));
+
+  /* --- Dark theme background --- */
+  --bg-from: #232526;
+  --bg-to: #414345;
+  --background: linear-gradient(135deg, var(--bg-from), var(--bg-to));
+  --surface: rgba(0, 0, 0, 0.6);
+  --surface-card: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(30, 30, 32, 0.95);
+
+  /* --- Dark theme text --- */
+  --text: #ffffff;
+  --text-muted: #b3b3b3;
+  --text-body: #e0e0e0;
+
+  /* --- Dark theme border --- */
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* --- Neon accents (stable across themes) --- */
+  --blue: #7ecfff;
+  --blue-tint: rgba(126, 207, 255, 0.1);
+  --blue-tint-hover: rgba(126, 207, 255, 0.2);
+  --fuchsia: #f102ce;
+  --fuchsia-shadow: 0 2px 8px 0 rgba(241, 2, 206, 0.2);
+  --fuchsia-shadow-hover: 0 6px 20px 0 rgba(241, 2, 206, 0.3);
+  --lime: #39ff14;
+  --lime-glow: rgba(57, 255, 20, 0.25);
+  --orange: #ff5722;
+  --orange-glow: rgba(255, 87, 34, 0.25);
+  --purple: #a020f0;
+  --purple-glow: rgba(160, 32, 240, 0.25);
+
+  /* --- Semantic aliases --- */
+  --accent: var(--blue);
+  --accent-soft: var(--blue-tint);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.4), var(--fuchsia-shadow);
+  --code-background: #0a0a0c;
+
+  /* --- Motion --- */
+  --transition: all 0.2s;
 }
 
-:root[data-theme='dark'] {
-  color-scheme: dark;
-  --background: #08111f;
-  --surface: rgba(15, 23, 42, 0.86);
-  --surface-strong: #0f172a;
-  --text: #e5eef9;
-  --text-muted: #91a2bb;
-  --border: rgba(148, 163, 184, 0.16);
-  --accent: #7dd3fc;
-  --accent-soft: rgba(125, 211, 252, 0.12);
-  --code-background: #020617;
-  --shadow: 0 18px 60px rgba(2, 6, 23, 0.36);
+/* Light theme overrides */
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --bg-from: #f5f7fa;
+  --bg-to: #e4e8f0;
+  --background: linear-gradient(135deg, var(--bg-from), var(--bg-to));
+  --surface: rgba(255, 255, 255, 0.85);
+  --surface-card: rgba(0, 0, 0, 0.03);
+  --surface-strong: rgba(255, 255, 255, 0.98);
+
+  --text: #111215;
+  --text-muted: #60646c;
+  --text-body: #2d3139;
+
+  --border: rgba(0, 0, 0, 0.1);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.08), var(--fuchsia-shadow);
+  --code-background: #1a1a2e;
+
+  --accent: #0ea5e9;
+  --accent-soft: rgba(14, 165, 233, 0.1);
+  --blue-tint: rgba(14, 165, 233, 0.1);
+  --blue-tint-hover: rgba(14, 165, 233, 0.2);
 }
 
 * {
   box-sizing: border-box;
+  transition: var(--transition);
 }
 
 html {
@@ -39,11 +88,16 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter Variable', Inter, system-ui, sans-serif;
-  background:
-    radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 25%), var(--background);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--background);
   color: var(--text);
   line-height: 1.65;
+  min-height: 100vh;
+}
+
+p,
+li {
+  color: var(--text-body);
 }
 
 img {
@@ -55,6 +109,7 @@ a {
   color: inherit;
   text-decoration-color: var(--accent);
   text-underline-offset: 0.25rem;
+  transition: var(--transition);
 }
 
 a:hover {
@@ -102,12 +157,13 @@ kbd {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(16px);
-  background: rgba(245, 247, 251, 0.8);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(20, 20, 22, 0.75);
   border-bottom: 1px solid var(--border);
 }
 
-:root[data-theme='dark'] .site-header {
-  background: rgba(8, 17, 31, 0.8);
+:root[data-theme='light'] .site-header {
+  background: rgba(245, 247, 250, 0.8);
 }
 
 .header-inner,
@@ -161,9 +217,16 @@ kbd {
   border-radius: 0.9rem;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--accent), #22c55e);
+  background: linear-gradient(135deg, var(--blue), var(--fuchsia));
   color: #fff;
   font-weight: 700;
+  box-shadow: var(--fuchsia-shadow);
+  transition: var(--transition);
+}
+
+.brand:hover .brand-mark {
+  box-shadow: var(--fuchsia-shadow-hover);
+  transform: translateY(-2px) scale(1.05);
 }
 
 .brand-subtitle,
@@ -198,18 +261,40 @@ kbd {
   border-radius: 999px;
   padding: 0.5rem 0.85rem;
   text-decoration: none;
-  background: var(--surface);
+  background: var(--surface-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: var(--transition);
+}
+
+.nav-list a:hover,
+.tag-list a:hover,
+.tag-cloud a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--blue-tint-hover);
+  transform: translateY(-1px);
 }
 
 .nav-list a[aria-current='page'] {
   border-color: var(--accent);
   color: var(--accent);
+  background: var(--blue-tint);
+  box-shadow: 0 0 8px var(--blue-tint-hover);
 }
 
 .theme-toggle {
   font: inherit;
   color: inherit;
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--fuchsia);
+  color: var(--fuchsia);
+  box-shadow: var(--fuchsia-shadow);
+  transform: translateY(-1px);
 }
 
 .hero,
@@ -222,6 +307,8 @@ kbd {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .hero,
@@ -255,8 +342,10 @@ kbd {
 .hero-panel {
   padding: 1.5rem;
   border-radius: var(--radius);
-  background: linear-gradient(180deg, var(--accent-soft), transparent);
+  background: linear-gradient(180deg, var(--blue-tint), transparent);
   border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .hero-topics li,
@@ -273,14 +362,31 @@ kbd {
   padding: 0.8rem 1.1rem;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--surface-card);
   text-decoration: none;
+  transition: var(--transition);
+}
+
+.button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--blue-tint-hover);
 }
 
 .button-primary {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: linear-gradient(135deg, var(--blue), var(--fuchsia));
+  border-color: transparent;
   color: #ffffff;
+  font-weight: 600;
+  box-shadow: var(--fuchsia-shadow);
+}
+
+.button-primary:hover {
+  color: #ffffff;
+  box-shadow: var(--fuchsia-shadow-hover);
+  transform: translateY(-2px);
+  border-color: transparent;
 }
 
 section + section {
@@ -299,6 +405,15 @@ section + section {
 
 .card {
   overflow: hidden;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    var(--fuchsia-shadow-hover),
+    0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent);
 }
 
 .card-cover {
@@ -348,10 +463,11 @@ section + section {
 
 .eyebrow {
   margin: 0;
-  color: var(--accent);
+  color: var(--fuchsia);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-shadow: var(--fuchsia-shadow);
 }
 
 .page-intro,
@@ -411,7 +527,7 @@ section + section {
 .article-body :where(blockquote) {
   margin: 1.5rem 0;
   padding-left: 1rem;
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--fuchsia);
   color: var(--text-muted);
 }
 
@@ -478,7 +594,7 @@ pre {
 
 .callout {
   margin: 1.5rem 0;
-  background: linear-gradient(180deg, var(--accent-soft), transparent);
+  background: linear-gradient(180deg, var(--blue-tint), transparent);
 }
 
 .footer-grid {
