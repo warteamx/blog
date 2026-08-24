@@ -1,4 +1,27 @@
 <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">
-  <span aria-hidden="true">◐</span>
-  <span data-theme-label>Theme</span>
+  <span data-theme-icon aria-hidden="true">🌙</span>
+  <span data-theme-label>Dark</span>
 </button>
+
+<script is:inline>
+  (() => {
+    const btn = document.querySelector('[data-theme-toggle]');
+    const icon = document.querySelector('[data-theme-icon]');
+    const label = document.querySelector('[data-theme-label]');
+
+    const sync = () => {
+      const theme = document.documentElement.dataset.theme ?? 'dark';
+      if (icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+      if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+    };
+
+    sync();
+
+    btn?.addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('theme-preference', next);
+      sync();
+    });
+  })();
+</script>
