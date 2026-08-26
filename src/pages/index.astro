@@ -105,6 +105,7 @@ const latestPosts = allPosts.slice(0, 3);
     border-radius: 0.75rem;
     text-decoration: none;
     overflow: hidden;
+    box-shadow: var(--shadow);
     transition:
       transform 0.2s ease,
       box-shadow 0.2s ease;
@@ -112,7 +113,9 @@ const latestPosts = allPosts.slice(0, 3);
 
   .cta-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    box-shadow:
+      0 12px 32px rgba(0, 0, 0, 0.25),
+      var(--fuchsia-shadow-hover);
   }
 
   .cta-labs {
@@ -159,6 +162,8 @@ const latestPosts = allPosts.slice(0, 3);
 
   .cta-desc {
     font-size: 0.9rem;
+    /* override global `p` color so text stays readable on the always-dark card backgrounds */
+    color: inherit;
     opacity: 0.85;
     line-height: 1.6;
     flex: 1;
