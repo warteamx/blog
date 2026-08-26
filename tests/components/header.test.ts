@@ -11,11 +11,12 @@ describe('Header', () => {
       },
     });
 
-    expect(html).toContain('Home');
+    expect(html).toContain('Blog Home');
+    expect(html).toContain('Main Site');
     expect(html).toContain('Blog');
-    expect(html).toContain('Projects');
     expect(html).toContain('About');
     expect(html).toContain('Uses');
     expect(html).toContain('Software Lab');
+    expect(html).toContain('https://warteamx.com');
   });
 });

@@ -8,10 +8,10 @@ export const siteConfig = {
   socialImage: '/social-card.svg',
   socialHandle: '@warteamx',
   email: 'hello@warteamx.com',
+  mainSiteUrl: 'https://warteamx.com',
   navigation: [
-    { href: '/', label: 'Home' },
+    { href: '/', label: 'Blog Home' },
     { href: '/blog/', label: 'Blog' },
-    { href: '/projects/', label: 'Projects' },
     { href: '/about/', label: 'About' },
     { href: '/uses/', label: 'Uses' },
   ],
