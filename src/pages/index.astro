@@ -2,16 +2,12 @@
 import { getCollection } from 'astro:content';
 import ArticleCard from '@/components/ArticleCard.astro';
 import Hero from '@/components/Hero.astro';
-import ProjectCard from '@/components/ProjectCard.astro';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { isPublished, sortPosts, withBase, type ProjectEntry } from '@/utils/content';
+import { isPublished, sortPosts, withBase } from '@/utils/content';
 
 const allPosts = sortPosts((await getCollection('blog')).filter(isPublished));
 const featuredArticles = allPosts.slice(0, 2);
 const latestPosts = allPosts.slice(0, 3);
-const featuredProjects = (await getCollection('projects')).filter(
-  (project: ProjectEntry) => project.data.featured,
-);
 ---
 
 <BaseLayout>
@@ -30,16 +26,41 @@ const featuredProjects = (await getCollection('projects')).filter(
     </div>
   </section>
 
-  <section aria-labelledby="featured-projects-title">
+  <section aria-labelledby="explore-main-title">
     <div class="section-heading">
       <div>
-        <p class="eyebrow">Featured projects</p>
-        <h2 id="featured-projects-title">Selected work with an engineering-first mindset</h2>
+        <p class="eyebrow">🌐 Explore WarTeamX</p>
+        <h2 id="explore-main-title">Beyond the blog — discover what we're building</h2>
       </div>
-      <a href={withBase('/projects/')}>See the full project showcase</a>
     </div>
-    <div class="card-grid">
-      {featuredProjects.map((project: ProjectEntry) => <ProjectCard project={project} />)}
+    <div class="cta-grid">
+      <a
+        href="https://www.warteamx.com/labs.html"
+        class="cta-card cta-labs"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="cta-icon" aria-hidden="true">🔬</span>
+        <strong class="cta-title">Labs &amp; Projects</strong>
+        <p class="cta-desc">
+          Explore the full collection of experiments, open-source tools, and engineering builds from
+          WarTeamX Software Labs.
+        </p>
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </a>
+      <a
+        href="https://www.warteamx.com/brand.html"
+        class="cta-card cta-brand"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="cta-icon" aria-hidden="true">🎨</span>
+        <strong class="cta-title">Brand Guidelines</strong>
+        <p class="cta-desc">
+          Colours, typography, logos, and the visual identity principles behind the WarTeamX brand.
+        </p>
+        <span class="cta-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </section>
 
@@ -66,3 +87,90 @@ const featuredProjects = (await getCollection('projects')).filter(
     </p>
   </section>
 </BaseLayout>
+
+<style>
+  .cta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .cta-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    overflow: hidden;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .cta-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .cta-labs {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    border: 1px solid rgba(99, 179, 237, 0.25);
+    color: #e8f4fd;
+  }
+
+  .cta-brand {
+    background: linear-gradient(135deg, #1a0a2e 0%, #2d1155 60%, #6b21a8 100%);
+    border: 1px solid rgba(196, 132, 250, 0.25);
+    color: #f3e8ff;
+  }
+
+  .cta-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .cta-labs .cta-icon {
+    animation-delay: 0s;
+  }
+
+  .cta-brand .cta-icon {
+    animation-delay: 1.5s;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .cta-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .cta-desc {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .cta-arrow {
+    font-size: 1.25rem;
+    font-weight: 700;
+    transition: transform 0.2s ease;
+  }
+
+  .cta-card:hover .cta-arrow {
+    transform: translateX(6px);
+  }
+</style>
