@@ -6,7 +6,16 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { isPublished, sortPosts, withBase } from '@/utils/content';
 
 const allPosts = sortPosts((await getCollection('blog')).filter(isPublished));
-const featuredArticles = allPosts.slice(0, 2);
+const featuredArticles = [
+  allPosts.find((post) => post.id === 'books/top-5-books-every-software-engineer-should-read'),
+  ...allPosts.filter(
+    (post) =>
+      post.id !== 'books/top-5-books-every-software-engineer-should-read' &&
+      post.id !== 'books/designing-data-intensive-applications-review',
+  ),
+]
+  .filter(Boolean)
+  .slice(0, 2);
 const latestPosts = allPosts.slice(0, 3);
 ---
 
