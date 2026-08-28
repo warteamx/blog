@@ -92,7 +92,7 @@ The error budget transforms reliability from a vague aspiration into a concrete 
 - If the service is well within budget, the team can deploy more aggressively, take more risks with new features, and run experiments.
 - If the service is approaching or exceeding the budget, reliability work takes priority until the budget recovers.
 
-This framework resolves a chronic organizational tension. Development teams are typically incentivized to ship features quickly. Operations teams are typically incentivized to prevent change (because change introduces risk). Error budgets give both teams the same number to optimize: burn too slowly and you're leaving velocity on the table; burn too fast and you're failing users.
+This framework resolves a chronic organizational tension. Development teams are typically incentivized to ship features quickly. Operations teams are typically incentivized to prevent change (because change introduces risk). Error budgets give both teams the same number to optimize: burning too slowly leaves velocity on the table; burning too fast fails users.
 
 The error budget also provides a rational basis for deciding when to stop deployments or roll back changes. If a deployment consumes 20% of the monthly error budget in the first hour, pausing is arithmetically justified rather than a matter of opinion.
 
