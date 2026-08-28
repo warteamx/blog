@@ -226,3 +226,4 @@ Engineers who absorb that argument, and the framework built on it, build and ope
 - [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
 - [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
 - [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)

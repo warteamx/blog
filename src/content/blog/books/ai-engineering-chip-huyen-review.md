@@ -208,3 +208,4 @@ The field is moving quickly, but the engineering challenges Huyen identifies —
 - [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
 - [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
 - [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)

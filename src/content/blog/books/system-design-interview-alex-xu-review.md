@@ -237,3 +237,4 @@ The engineer who works through both volumes will approach architectural problems
 - [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
 - [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
 - [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)

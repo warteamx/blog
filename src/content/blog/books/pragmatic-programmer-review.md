@@ -174,3 +174,4 @@ The book does not promise to make anyone a great programmer. It offers something
 - [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
 - [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
 - [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)

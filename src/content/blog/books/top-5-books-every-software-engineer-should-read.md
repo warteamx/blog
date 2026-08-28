@@ -72,6 +72,16 @@ The most important mindset shift it produces is that **production is part of sof
 
 ---
 
+## ⭐ Extra Mention: The Imposter's Handbook — Rob Conery
+
+For software engineers who built their skills through practice rather than a formal computer science degree, _The Imposter's Handbook_ by Rob Conery fills a unique role. It covers the CS fundamentals that often go unaddressed in day-to-day development work: algorithms, data structures, Big O notation, databases, networking, operating systems, compilers, and computer architecture.
+
+The book approaches these topics from the perspective of a working developer who wants to understand what is underneath the abstractions — not to pass an exam, but to reason better about the software being built.
+
+> Deep dive: [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)
+
+---
+
 ## A Framework for Reading Order
 
 These books cover different layers of the engineering stack:
@@ -79,6 +89,7 @@ These books cover different layers of the engineering stack:
 | Book                                      | Primary Focus                             |
 | ----------------------------------------- | ----------------------------------------- |
 | **The Pragmatic Programmer**              | Engineering mindset and habits            |
+| **The Imposter's Handbook**               | Computer science fundamentals             |
 | **System Design Interview**               | Thinking in systems                       |
 | **Designing Data-Intensive Applications** | Distributed systems and data architecture |
 | **AI Engineering**                        | Building with foundation models           |
