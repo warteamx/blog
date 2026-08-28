@@ -485,6 +485,10 @@ section + section {
   margin-bottom: 2rem;
 }
 
+.article-meta + .tag-list {
+  margin-top: 0.75rem;
+}
+
 .article-sidebar {
   position: sticky;
   top: 6rem;
