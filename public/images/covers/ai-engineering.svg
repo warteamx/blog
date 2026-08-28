@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">AI Engineering</title>
+  <desc id="description">Abstract illustration of connected foundation model layers.</desc>
+  <rect width="1200" height="630" fill="#102a43"/>
+  <path d="M0 500h1200v130H0z" fill="#0b1f33"/>
+  <g fill="none" stroke="#43d9bd" stroke-width="8" opacity=".9">
+    <path d="M150 160h250v110H150zM475 160h250v110H475zM800 160h250v110H800z"/>
+    <path d="M150 360h250v110H150zM475 360h250v110H475zM800 360h250v110H800z"/>
+    <path d="M275 270v90M600 270v90M925 270v90M400 215h75M725 215h75M400 415h75M725 415h75"/>
+  </g>
+  <g fill="#f6c85f">
+    <circle cx="275" cy="215" r="18"/><circle cx="600" cy="215" r="18"/><circle cx="925" cy="215" r="18"/>
+    <circle cx="275" cy="415" r="18"/><circle cx="600" cy="415" r="18"/><circle cx="925" cy="415" r="18"/>
+  </g>
+  <text x="150" y="105" fill="#f7fafc" font-family="sans-serif" font-size="54" font-weight="700">AI ENGINEERING</text>
+  <text x="150" y="560" fill="#9fb3c8" font-family="sans-serif" font-size="26" letter-spacing="3">BUILDING APPLICATIONS WITH FOUNDATION MODELS</text>
+</svg>
