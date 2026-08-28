@@ -10,6 +10,7 @@ tags:
   - System Design
   - Architecture
 draft: false
+coverImage: /images/covers/books.svg
 readingTime: 12 min read
 ---
 

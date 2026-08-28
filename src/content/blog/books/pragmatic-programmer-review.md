@@ -10,6 +10,7 @@ tags:
   - Best Practices
   - Craftsmanship
 draft: false
+coverImage: /images/covers/books.svg
 readingTime: 10 min read
 ---
 

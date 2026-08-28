@@ -10,6 +10,7 @@ tags:
   - Scalability
   - Distributed Systems
 draft: false
+coverImage: /images/covers/books.svg
 readingTime: 11 min read
 ---
 

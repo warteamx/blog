@@ -10,6 +10,7 @@ tags:
   - System Design
   - Distributed Systems
 draft: false
+coverImage: /images/covers/books.svg
 readingTime: 8 min read
 ---
 

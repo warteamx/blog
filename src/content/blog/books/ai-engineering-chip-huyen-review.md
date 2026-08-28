@@ -10,6 +10,7 @@ tags:
   - Machine Learning
   - System Design
 draft: false
+coverImage: /images/covers/ai-engineering.svg
 readingTime: 11 min read
 ---
 
