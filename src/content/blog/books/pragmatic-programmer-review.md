@@ -18,7 +18,7 @@ _The Pragmatic Programmer_ (Addison-Wesley, 1999; 20th Anniversary Edition, 2019
 
 That longevity is not accidental. The book deliberately avoids recommendations about specific languages or frameworks. Instead, it focuses on **principles and habits** — the layer of software engineering that changes very slowly.
 
-> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read) series.
+> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/) series.
 
 ---
 
@@ -129,10 +129,10 @@ The core philosophy is unchanged. The authors note in the introduction that when
 
 The Pragmatic Programmer is deliberately a book about mindset and habits rather than technical depth. It does not cover:
 
-- Distributed systems architecture (see [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review))
-- Scalable system design (see [System Design Interview](/blog/books/system-design-interview-alex-xu-review))
-- Production operations and reliability (see [Site Reliability Engineering](/blog/books/site-reliability-engineering-google-review))
-- AI application engineering (see [AI Engineering](/blog/books/ai-engineering-chip-huyen-review))
+- Distributed systems architecture (see [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review/))
+- Scalable system design (see [System Design Interview](/blog/books/system-design-interview-alex-xu-review/))
+- Production operations and reliability (see [Site Reliability Engineering](/blog/books/site-reliability-engineering-google-review/))
+- AI application engineering (see [AI Engineering](/blog/books/ai-engineering-chip-huyen-review/))
 
 It is a foundation, not a complete reference. Engineers who build on its habits will get more from every more specialized book they read afterward.
 
@@ -169,9 +169,9 @@ The book does not promise to make anyone a great programmer. It offers something
 
 **Related posts in this series:**
 
-- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read)
-- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review)
-- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
-- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
-- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
-- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)
+- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/)
+- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review/)
+- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review/)
+- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review/)
+- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review/)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review/)

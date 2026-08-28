@@ -28,7 +28,7 @@ The definitive resource for understanding what happens underneath your applicati
 
 The core lesson is that **distributed systems are fundamentally about trade-offs**. There is rarely a perfect architecture; there are only different guarantees with different costs.
 
-> Deep dive: [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review)
+> Deep dive: [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review/)
 
 ---
 
@@ -38,7 +38,7 @@ First published in 1999 and updated for its 20th anniversary edition, this book 
 
 The reason it has lasted is that it is about **how to think like an engineer**, not about a specific language or platform.
 
-> Deep dive: [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
+> Deep dive: [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review/)
 
 ---
 
@@ -48,7 +48,7 @@ The practical guide for software engineers building applications with foundation
 
 The key framing is that most software engineers are not training frontier models from scratch; they are **building software that uses models**, which requires a different set of skills.
 
-> Deep dive: [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
+> Deep dive: [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review/)
 
 ---
 
@@ -58,7 +58,7 @@ Despite the name, these two volumes are far more than interview preparation. The
 
 The central lesson is that good system design is about making the **right trade-offs for the problem**, not about drawing the most complicated diagram.
 
-> Deep dive: [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
+> Deep dive: [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review/)
 
 ---
 
@@ -68,7 +68,7 @@ Written by Google engineers, this book explains what happens after the code is m
 
 The most important mindset shift it produces is that **production is part of software engineering**. Writing code is only one part of the job.
 
-> Deep dive: [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
+> Deep dive: [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review/)
 
 ---
 
@@ -78,7 +78,7 @@ For software engineers who built their skills through practice rather than a for
 
 The book approaches these topics from the perspective of a working developer who wants to understand what is underneath the abstractions — not to pass an exam, but to reason better about the software being built.
 
-> Deep dive: [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)
+> Deep dive: [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review/)
 
 ---
 

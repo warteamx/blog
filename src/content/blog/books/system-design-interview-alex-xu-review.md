@@ -18,7 +18,7 @@ _System Design Interview_ by Alex Xu (ByteByteGo, 2020; Volume 2, 2022) carries 
 
 The books work through a series of concrete design problems — URL shorteners, rate limiters, notification systems, distributed key-value stores, social feeds, search autocomplete — and explain not just what to build but **how to think about the problem**. That thinking process is the real product.
 
-> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read) series.
+> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/) series.
 
 ---
 
@@ -206,7 +206,7 @@ The System Design Interview volumes are designed for accessibility. This means:
 - Some topics are introduced without covering failure modes and edge cases in depth
 - The interview framing occasionally shapes the presentation (time-boxed exploration, emphasis on completeness over depth)
 
-For deeper treatment of distributed systems fundamentals, [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review) provides the theoretical grounding that System Design Interview leaves implicit.
+For deeper treatment of distributed systems fundamentals, [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review/) provides the theoretical grounding that System Design Interview leaves implicit.
 
 ---
 
@@ -232,9 +232,9 @@ The engineer who works through both volumes will approach architectural problems
 
 **Related posts in this series:**
 
-- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read)
-- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review)
-- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
-- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
-- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
-- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)
+- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/)
+- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review/)
+- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review/)
+- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review/)
+- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review/)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review/)

@@ -17,7 +17,7 @@ _The Imposter's Handbook_ by Rob Conery (self-published, 2016; Second Edition, 2
 
 The title names the feeling directly. Many experienced developers have encountered "imposter syndrome" — the sense that, despite years of productive work, there are entire layers of the discipline they have never formally studied. Conery wrote this book to address those gaps, approaching each topic as a working developer who learned it as an adult.
 
-> Extra mention in the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read) series.
+> Extra mention in the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/) series.
 
 ---
 
@@ -184,8 +184,8 @@ _The Imposter's Handbook_ is breadth-first, not depth-first. Engineers who need 
 
 - **Algorithms**: _Introduction to Algorithms_ (CLRS) is the authoritative reference
 - **Databases**: _Designing Data-Intensive Applications_ for distributed data systems; database-specific documentation for implementation detail
-- **Distributed systems**: [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review) provides far deeper treatment
-- **System design**: [System Design Interview](/blog/books/system-design-interview-alex-xu-review) for practical scalable architecture patterns
+- **Distributed systems**: [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review/) provides far deeper treatment
+- **System design**: [System Design Interview](/blog/books/system-design-interview-alex-xu-review/) for practical scalable architecture patterns
 
 The book's value is in providing sufficient coverage to remove confusion and enable further learning, not in replacing deeper resources on any topic.
 
@@ -214,9 +214,9 @@ The engineers who benefit most from this book are those who have already built c
 
 **Related posts in this series:**
 
-- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read)
-- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review)
-- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
-- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
-- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
-- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
+- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/)
+- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review/)
+- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review/)
+- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review/)
+- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review/)
+- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review/)

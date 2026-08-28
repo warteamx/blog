@@ -18,7 +18,7 @@ _AI Engineering: Building Applications with Foundation Models_ (O'Reilly, 2025) 
 
 Huyen brings a practical orientation grounded in her experience at NVIDIA and Clarifai and her widely-read writing on machine learning systems. The result is a book that takes software engineers seriously as the primary audience, rather than treating AI application development as a subset of ML research.
 
-> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read) series.
+> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/) series.
 
 ---
 
@@ -203,9 +203,9 @@ The field is moving quickly, but the engineering challenges Huyen identifies —
 
 **Related posts in this series:**
 
-- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read)
-- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review)
-- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
-- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
-- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review)
-- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)
+- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/)
+- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review/)
+- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review/)
+- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review/)
+- [Site Reliability Engineering — A Deep Review](/blog/books/site-reliability-engineering-google-review/)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review/)

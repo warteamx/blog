@@ -21,7 +21,7 @@ The book collects essays from Google SREs across a wide range of topics: service
 
 The influence of the book has been substantial. Terms it introduced or popularized — SLO, SLI, error budget, toil — have entered the standard vocabulary of modern software engineering organizations.
 
-> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read) series.
+> Part of the [Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/) series.
 
 ---
 
@@ -185,7 +185,7 @@ Writing code is one activity in the lifecycle of software. But software must be 
 
 Engineers who think seriously about observability during development — logging useful information, exposing meaningful metrics, making failure modes explicit — are also engineers whose systems are easier to operate.
 
-This is directly complementary to the architecture-focused thinking in [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review) and the engineering habits covered in [The Pragmatic Programmer](/blog/books/pragmatic-programmer-review).
+This is directly complementary to the architecture-focused thinking in [Designing Data-Intensive Applications](/blog/books/designing-data-intensive-applications-review/) and the engineering habits covered in [The Pragmatic Programmer](/blog/books/pragmatic-programmer-review/).
 
 ---
 
@@ -221,9 +221,9 @@ Engineers who absorb that argument, and the framework built on it, build and ope
 
 **Related posts in this series:**
 
-- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read)
-- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review)
-- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review)
-- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review)
-- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review)
-- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review)
+- [The Top 5 Books Every Software Engineer Should Read](/blog/books/top-5-books-every-software-engineer-should-read/)
+- [Designing Data-Intensive Applications — A Deep Review](/blog/books/designing-data-intensive-applications-review/)
+- [The Pragmatic Programmer — A Deep Review](/blog/books/pragmatic-programmer-review/)
+- [AI Engineering — A Deep Review](/blog/books/ai-engineering-chip-huyen-review/)
+- [System Design Interview — A Deep Review](/blog/books/system-design-interview-alex-xu-review/)
+- [The Imposter's Handbook — A Deep Review](/blog/books/imposters-handbook-review/)
